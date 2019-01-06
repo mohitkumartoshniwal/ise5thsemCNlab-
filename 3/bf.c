@@ -13,16 +13,12 @@ int main()
     printf("\nEnter the cost matrix :\n");
     for(i=0;i<nodes;i++)
     {
-        for(j=0;j<nodes;j++)
+       for(j=0;j<nodes;j++)
         {
             scanf("%d",&costmat[i][j]);
-            
-		if(costmat[i][j]==0)
-			costmat[i][j]=999;
-      		costmat[i][i]=0;
+            costmat[i][i]=0;
             rt[i].dist[j]=costmat[i][j];
-            rt[i].from[j]=j; 
-	  
+            rt[i].from[j]=j;
         }
     }
         do
